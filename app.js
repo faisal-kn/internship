@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql')
 var jwt = require('jsonwebtoken');
+require('dotenv').config();
 var cookieParser = require('cookie-parser');
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
@@ -182,4 +183,4 @@ app.get('/logout', (req, res) => {
 })
 
 
-app.listen(process.env.port,()=>console.log("Running"));
+app.listen(process.env.PORT,()=>console.log("Running"));
