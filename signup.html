@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+    <form id="setup" method="POST" action="/signup">
+        <div class="imgholder">
+        <img src="./avtar.gif" alt="">
+        </div>
+        <h2 id="heading">Sign Up</h2>
+        <div id="cont">
+            <p><b>Name:</b> </p><input type="text" id="name" placeholder="Name" name="name" required><br><br>
+            <p><b>Email:</b> </p><input type="email" id="email" placeholder="Email" name="email" required><br><br>
+            <p><b>Phone No:</b> </p><input type="text" id="phno" pattern="[1-9]{1}[0-9]{9}" placeholder=" Phone No" name="phno" required><br><br>
+                <p><b>Password:</b> </p><input type="password" id="pass" pattern="[0-9A-Za-z]{10}" placeholder="Password" name="password1" required><br><br>
+                <p><b>Confirm Password:</b> </p><input type="password" id="repass" pattern="[0-9A-Za-z]{10}" placeholder="Confirm Password" name="password2" required><br><br>
+                <input type="submit" id="submit" value="Submit" onclick="return Validate()">
+                <a href="/login">Log In</a>
+        </div>
+
+        <script type="text/javascript">
+            function Validate() {
+                var password = document.getElementById("pass").value;
+                var confirmPassword = document.getElementById("repass").value;
+                if (password != confirmPassword) {
+                    alert("You first Passwords is not similar with 2nd password. Please enter same password in both");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+        </div>
+    </form>
+
+</body>
+
+</html>

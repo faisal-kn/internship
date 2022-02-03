@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+    <form id="setup" method="POST" action="/login">
+        <div class="imgholder">
+            <img src="../avtar.gif" alt="">
+            </div>
+        <h2 id="heading">Log In</h2>
+        <div id="cont">
+
+            <p><b>Name:</b> </p><input type="text" id="name" placeholder="Name" name="name" required><br><br>
+
+            <p><b>Password:</b> </p><input type="password" id="pass" placeholder="Password" name="password"
+                required><br>
+    
+
+                <span><%= error %></span><br>
+            <input type="submit" id="submit" value="Log in">
+            <br><br>
+            <a href="/signup">Sign Up</a>
+        </div>
+
+        <!-- <button type="submit">Login</button> -->
+
+        </div>
+    </form>
+
+</body>
+
+</html>
