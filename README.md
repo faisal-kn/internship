@@ -20,6 +20,7 @@ it will move to detail page and make cookie else it will give alert.
 It consists of fields
 * Name
 * Password
+
 if correct name password is given then it will move to detail page and make cookie else 
 it will give warning.
 
