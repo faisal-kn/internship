@@ -182,4 +182,4 @@ app.get('/logout', (req, res) => {
 })
 
 
-app.listen(4000,()=>console.log("Running"));
+app.listen(process.env.port,()=>console.log("Running"));
