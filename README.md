@@ -25,7 +25,7 @@ if correct name password is given then it will move to detail page and make cook
 it will give warning.
 
 ### detail page
-It shows details of all users who have registered.
+It shows details of all users who have registered (data stored in sql database).
 It also has logout option to logout.
 
 I also have used templates(ejs) for detail page and login to make dynamic changes easily.
