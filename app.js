@@ -75,7 +75,7 @@ app.post("/login", async(req, res) => {
                         res.redirect('/detail');
                     }
                  else {
-                    res.render("login",{error:"Wrong Password"});
+                    res.render("login",{error:"Wrong Password or user name"});
                 }}
     
             })
