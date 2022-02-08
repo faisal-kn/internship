@@ -8,25 +8,14 @@ It contains 3 pages:
 3. detail page
 
 ### signup page
-It consists of fields
-* Name
-* Email ID
-* Phone Number (should be only 10 digit numeric value): I used regex ([1-9]{1}[0-9]{9})
-* Password ( the password should be of 10 digits, and only 0-9, A-Z, a-z): I used regex ([0-9A-Za-z]{10})
-* Confirm Password Field (should match with same password) : onclicking log, first if both password are same then
-it will move to detail page and make cookie else it will give alert.
+when all the fields are entered and each of the specification mentioned is fullfilled it will create the user account and log him in.
+i have used jwt autentication with cookie.
 
 ### login page
-It consists of fields
-* Name
-* Password
 
-if correct name password is given then it will move to detail page and make cookie else 
-it will give warning.
+if given name and password are correct then it will log in the website and a auth cookie will be created.
 
 ### detail page
-It shows details of all users who have registered (data stored in sql database).
-It also has logout option to logout.
+It has all the users in the database in the present and all of their details and a logout button to log out of the application.
 
-I also have used templates(ejs) for detail page and login to make dynamic changes easily.
-Used jwt auth to check every route. And deployed whole assignment in heroku
+The website is deployed on heroku.

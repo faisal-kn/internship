@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
+  </head>
 
-</head>
-
-<body>
-    <h1 style="text-align: center;">Details</h1>
+  <body>
+    <a href="/logout" class="log-button">Log Out</a>
+    <h1 style="text-align: center">Details of all the user in database</h1>
     <div id="container">
-    <% if (rows.length> 0) { %>
-        <% rows.forEach(blog=> { %>
-            <div class="box">
-                <img src="../user.jpg"/>
-                <div class="text">
-                    <p class="snippet">Name: <%= blog.name %>
-                </p>
-                        <p class="snippet">Email: <%= blog.email %>
-                        </p>
-                        <p class="snippet">Phone No.: <%= blog.phoneno %>
-                        </p>
-                </div>
-                
-            </div>
+      <% if (rows.length> 0) { %> <% rows.forEach(blog=> { %>
+      <div class="box">
+        <img src="../user.png" />
+        <div class="text">
+          <p class="snippet">Name: <%= blog.name %></p>
+          <p class="snippet">Email: <%= blog.email %></p>
+          <p class="snippet">Phone No.: <%= blog.phoneno %></p>
+        </div>
+      </div>
 
-            <% }) %>
-                <% } else { %>
-                    <p>There are no user data to display...</p>
-                    <% } %>
+      <% }) %> <% } else { %>
+      <p>There are no user data to display...</p>
+      <% } %>
     </div>
-                        <a href="/logout">Log Out</a>
-
-</body>
-
+  </body>
 </html>
